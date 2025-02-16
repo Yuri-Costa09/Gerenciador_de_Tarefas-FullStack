@@ -17,7 +17,7 @@ public class TaskService {
 
     // GET ALL BY USER ID:
     public List<Task> getTasksByUserId(long userId) {
-        return taskRepository.FindByUserId(userId);
+        return taskRepository.findByUserId(userId);
     }
 
     // CREATE TASK
