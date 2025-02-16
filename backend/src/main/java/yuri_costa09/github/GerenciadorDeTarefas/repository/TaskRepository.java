@@ -1,6 +1,6 @@
-package repository;
+package yuri_costa09.github.GerenciadorDeTarefas.repository;
 
-import entities.Task;
+import yuri_costa09.github.GerenciadorDeTarefas.entities.Task;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

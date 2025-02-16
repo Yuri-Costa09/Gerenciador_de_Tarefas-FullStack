@@ -1,9 +1,9 @@
-package services;
+package yuri_costa09.github.GerenciadorDeTarefas.services;
 
-import entities.User;
+import yuri_costa09.github.GerenciadorDeTarefas.entities.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import repository.UserRepository;
+import yuri_costa09.github.GerenciadorDeTarefas.repository.UserRepository;
 
 @Service
 public class UserService {

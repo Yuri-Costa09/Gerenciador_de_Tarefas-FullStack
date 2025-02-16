@@ -1,4 +1,4 @@
-package entities;
+package yuri_costa09.github.GerenciadorDeTarefas.entities;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;

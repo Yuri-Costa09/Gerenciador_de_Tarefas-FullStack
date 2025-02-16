@@ -1,10 +1,10 @@
-package services;
+package yuri_costa09.github.GerenciadorDeTarefas.services;
 
-import entities.Task;
-import entities.User;
+import yuri_costa09.github.GerenciadorDeTarefas.entities.Task;
+import yuri_costa09.github.GerenciadorDeTarefas.entities.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import repository.TaskRepository;
+import yuri_costa09.github.GerenciadorDeTarefas.repository.TaskRepository;
 import java.util.List;
 
 @Service
