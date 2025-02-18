@@ -14,8 +14,8 @@ import java.util.Set;
 @Table(name = "users")
 public class User {
     @Id
+    @Column(name = "user_id",nullable = false)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "user_id")
     private Long id;
     @Column(nullable = false, unique = true)
     private String username;
