@@ -5,17 +5,20 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import yuri_costa09.github.GerenciadorDeTarefas.repository.UserRepository;
 
+import java.util.Optional;
+
 @Service
 public class UserService {
 
     @Autowired
-    private UserRepository userRepository;
+    UserRepository userRepository;
+
     // GET:
     public User getUserById(long userId) {
         return userRepository.findById(userId).get();
     }
 
-    public User getUserByUsername(String username) {
+    public Optional<User> getUserByUsername(String username) {
         return userRepository.findByUsername(username);
     }
 
