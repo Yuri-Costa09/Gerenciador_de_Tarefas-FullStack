@@ -5,6 +5,6 @@ import org.springframework.stereotype.Repository;
 import yuri_costa09.github.GerenciadorDeTarefas.entities.Role;
 
 @Repository
-public interface RoleRepository extends JpaRepository<Role, Long> {
+public interface RoleRepository extends JpaRepository<Role, Role.RoleType> {
 
 }
