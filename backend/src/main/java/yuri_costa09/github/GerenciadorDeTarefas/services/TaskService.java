@@ -10,13 +10,17 @@ import java.util.List;
 @Service
 public class TaskService {
 
-    @Autowired
-    private TaskRepository taskRepository;
-    @Autowired
-    private UserService userService;
+    private final TaskRepository taskRepository;
+    private final UserService userService;
+
+    public TaskService(TaskRepository taskRepository, UserService userService) {
+        this.taskRepository = taskRepository;
+        this.userService = userService;
+    }
 
     // GET ALL BY USER ID:
     public List<Task> getTasksByUserId(long userId) {
+
         return taskRepository.findByUserId(userId);
     }
 
@@ -34,11 +38,13 @@ public class TaskService {
 
     // PATCH
     public Task updateTask(Task task) {
+
         return taskRepository.save(task);
     }
 
     // DELETEbyID
     public void deleteTaskById(long Id) {
+
         taskRepository.deleteById(Id);
     }
 }
