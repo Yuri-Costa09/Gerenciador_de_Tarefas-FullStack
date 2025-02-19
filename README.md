@@ -1,2 +1,2 @@
-# Gerenciador_de_Tarefas-FullStack
+# Gerenciador_de_Tarefas
 Sistema de gerenciamento de tarefas Full-Stack com Spring.
