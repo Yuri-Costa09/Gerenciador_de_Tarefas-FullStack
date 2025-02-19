@@ -15,8 +15,9 @@ public class SecurityConfig {
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http.csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(
-                        auth -> auth.requestMatchers("/login/authenticate", "users/register")
-                                .permitAll()
+                        auth -> auth
+                                .requestMatchers("/login/authenticate").permitAll()
+                                .requestMatchers("/users/register").permitAll()
                                 .anyRequest().authenticated())
                 .httpBasic(Customizer.withDefaults())
                 .oauth2ResourceServer(
