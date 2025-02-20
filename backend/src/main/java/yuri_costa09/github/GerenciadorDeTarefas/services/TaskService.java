@@ -2,7 +2,6 @@ package yuri_costa09.github.GerenciadorDeTarefas.services;
 
 import yuri_costa09.github.GerenciadorDeTarefas.entities.Task;
 import yuri_costa09.github.GerenciadorDeTarefas.entities.User;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import yuri_costa09.github.GerenciadorDeTarefas.repository.TaskRepository;
 import java.util.List;
@@ -25,10 +24,10 @@ public class TaskService {
     }
 
     // CREATE TASK
-    public Task createTask(Task task) {
+    public Task createTask(Task task, long id) {
 
         // buscar o usuário pelo id
-        User user = userService.getUserById(task.getUser().getId());
+        User user = userService.getUserById(id);
 
         // setar o usuário no task
         task.setUser(user);
